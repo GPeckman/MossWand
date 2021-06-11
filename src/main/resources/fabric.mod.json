@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "mosswand",
+  "version": "1.0.0-1.16.5",
+
+  "name": "Moss Wand",
+  "description": "Adds a wand to convert stone brick and cobblestone into the mossy variants",
+  "authors": ["GPeckman"],
+  "contact": {},
+  "icon": "assets/moss_wand/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.gpeck.mosswand.MossWand"
+    ],
+    "modmenu": [
+      "net.gpeck.mosswand.config.MossWandModMenuApiImpl"
+    ]
+  },
+  "mixins": [],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.16.x",
+    "cloth-config2": ">=4.0.0"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "moss_wand:item/moss_wand_item"
+  }
+}
