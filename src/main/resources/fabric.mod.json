@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "mosswand",
-  "version": "1.1.0-1.17",
+  "version": "1.1.1-1.17",
 
   "name": "Moss Wand",
   "description": "Adds a wand to convert stone brick and cobblestone into the mossy variants",
