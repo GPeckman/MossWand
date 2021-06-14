@@ -25,6 +25,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import net.minecraft.block.enums.BlockHalf;
 import net.minecraft.block.enums.SlabType;
+import net.minecraft.block.enums.StairShape;
 import net.minecraft.block.enums.WallShape;
 import net.minecraft.util.math.Direction;
 
@@ -75,7 +76,8 @@ public class MossWandItem extends Item {
 					Direction rot = target.get(StairsBlock.FACING);
 					boolean water = target.get(StairsBlock.WATERLOGGED);
 					BlockHalf half = target.get(StairsBlock.HALF);
-					state = (BlockState)state.with(StairsBlock.FACING, rot).with(StairsBlock.WATERLOGGED, water).with(StairsBlock.HALF, half);
+					StairShape shape = target.get(StairsBlock.SHAPE);
+					state = (BlockState)state.with(StairsBlock.FACING, rot).with(StairsBlock.WATERLOGGED, water).with(StairsBlock.HALF, half).with(StairsBlock.SHAPE, shape);
 				} else if (target.getBlock() instanceof WallBlock) {
 					boolean up = target.get(WallBlock.UP);
 					WallShape eastShape = target.get(WallBlock.EAST_SHAPE);
