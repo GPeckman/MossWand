@@ -1,6 +1,6 @@
 package net.gpeck.mosswand;
 
-import net.minecraft.item.*;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import me.shedaniel.autoconfig.AutoConfig;
