@@ -1,6 +1,8 @@
 {
-	"item.mosswand.mosswanditem": "Moss Wand",
+	"item.moss_wand.moss_wand_item": "Moss Wand",
+	"item.moss_wand.cracked_wand_item": "Cracked Wand",
 	
 	"text.autoconfig.mosswand.title": "Moss Wand",
-	"text.autoconfig.mosswand.option.useBoneMeal": "Use Bone Meal"
+	"text.autoconfig.mosswand.option.useBoneMeal": "Use Bone Meal",
+	"text.autoconfig.mosswand.option.useCoalCharcoal": "Use Coal/Charcoal"
 }

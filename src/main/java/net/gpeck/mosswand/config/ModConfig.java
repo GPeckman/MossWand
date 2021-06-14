@@ -11,6 +11,9 @@ public class ModConfig implements ConfigData {
 	@Comment("Does the Moss Wand consume bone meal [default = true]")
 	public boolean useBoneMeal = true;
 	
+	@Comment("Does the Cracked Wand consume coal/charcoal [default = true]")
+	public boolean useCoalCharcoal = true;
+	
 	public static ModConfig get() {
 		return AutoConfig.getConfigHolder(ModConfig.class).getConfig();
 	}
