@@ -1,16 +1,22 @@
 package net.gpeck.mosswand.item;
 
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUsageContext;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.block.*;
-import net.minecraft.world.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.BlockState;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ActionResult;
 import net.minecraft.entity.player.PlayerEntity;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 import net.gpeck.mosswand.config.ModConfig;
-import java.util.*;
+import java.util.Map;
 import java.util.function.Predicate;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
@@ -51,7 +57,7 @@ public class CrackedWandItem extends Item {
 				w.setBlockState(pos, state, 0);
 			}
 			
-			createParticles(w, pos, 15);
+			createParticles(w, pos, 15, state);
 			return ActionResult.success(w.isClient);
 		}
 		return ActionResult.PASS;
@@ -66,7 +72,7 @@ public class CrackedWandItem extends Item {
 	}
 	
 	@Environment(value=EnvType.CLIENT)
-	public static void createParticles(WorldAccess world, BlockPos pos, int count) {
+	public static void createParticles(WorldAccess world, BlockPos pos, int count, BlockState state) {
 		for (int i = 0; i < count; ++i) {
 			//Add a small, random amount of velocity
 			double xVel = RANDOM.nextGaussian() * 0.02;
@@ -77,7 +83,7 @@ public class CrackedWandItem extends Item {
 			double y = (double)pos.getY() + 0.5 + (RANDOM.nextDouble() - 0.5) * 3;
 			double z = (double)pos.getZ() + 0.5 + (RANDOM.nextDouble() - 0.5) * 3;
 			
-			world.addParticle(ParticleTypes.HAPPY_VILLAGER, x, y, z, xVel, yVel, zVel);
+			world.addParticle(ParticleTypes.SMOKE, x, y, z, xVel, yVel, zVel);
 		}
 	}
 }

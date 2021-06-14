@@ -1,21 +1,32 @@
 package net.gpeck.mosswand.item;
 
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUsageContext;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.block.*;
-import net.minecraft.block.enums.*;
-import net.minecraft.world.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
+import net.minecraft.block.WallBlock;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.ActionResult;
 import net.minecraft.entity.player.PlayerEntity;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 import net.gpeck.mosswand.config.ModConfig;
-import java.util.*;
+import java.util.Map;
 import java.util.function.Predicate;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
+import net.minecraft.block.enums.BlockHalf;
+import net.minecraft.block.enums.SlabType;
+import net.minecraft.block.enums.WallShape;
+import net.minecraft.util.math.Direction;
 
 public class MossWandItem extends Item {
 	static final Map<Block, BlockState> TARGET_BLOCKS = Maps.newHashMap(ImmutableMap.<Block, BlockState>builder()
