@@ -17,22 +17,22 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 	maven { url "https://maven.shedaniel.me/" }
-	maven { url "https://maven.terraformersmc.com/"}
+	maven { url "https://maven.terraformersmc.com/" }
 }
 
 dependencies {
-    minecraft "com.mojang:minecraft:1.16.5"
-    mappings "net.fabricmc:yarn:1.16.5+build.9:v2"
-    modImplementation "net.fabricmc:fabric-loader:0.11.3"
+    minecraft "com.mojang:minecraft:1.17"
+    mappings "net.fabricmc:yarn:1.17+build.11:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.11.6"
             
     //Fabric api
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.34.6+1.16"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.35.1+1.17"
     
-    modApi("me.shedaniel.cloth:cloth-config-fabric:4.11.26") {
+    modApi("me.shedaniel.cloth:cloth-config-fabric:5.0.34") {
         exclude(group: "net.fabricmc.fabric-api")
     }
     
-    modApi("com.terraformersmc:modmenu:1.16.9") {
+    modApi("com.terraformersmc:modmenu:2.0.2") {
     	exclude(group: "net.fabricmc.fabric-api")
     }
 }
