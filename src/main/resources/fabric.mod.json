@@ -1,11 +1,12 @@
 {
   "schemaVersion": 1,
   "id": "mosswand",
-  "version": "1.1.1-1.17",
+  "version": "1.2.0-1.17",
 
   "name": "Moss Wand",
   "description": "Adds a wand to convert stone brick and cobblestone into the mossy variants",
   "authors": ["GPeckman"],
+  "contributors": ["Pois1x"],
   "contact": {
   	"homepage": "https://www.curseforge.com/minecraft/mc-mods/moss-wand",
     "sources": "https://github.com/GPeckman/MossWand",
